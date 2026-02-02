@@ -110,3 +110,11 @@ After the deploy, the admin is at:
 
 - **Branch / content mismatch**  
   In Tina Cloud, the project must be connected to the same repo **and** branch that Vercel builds (e.g. `main`).
+
+- **Main branch not indexing in Tina**  
+  If Tina Cloud shows that `main` (or your production branch) is not indexed:
+  1. **Pull down the branch in Tina Cloud:** Go to [app.tina.io](https://app.tina.io) → your project → **Configuration** (or **Repo** / **Branches**). Find the option to **pull**, **index**, or **add** a branch. Add **main** (or your default branch name). Wait a few minutes for indexing to finish.
+  2. **Check indexed branches:** In the same project, open **Configuration** and look for “Indexed branches” or similar. Confirm **main** appears. If it doesn’t, use step 1 again or try step 3.
+  3. **Force reindex with `tina-lock.json`:** Tina can reindex when it sees a change on the branch. Generate the lock file locally: put your Tina **Client ID** and **Token** in `.env.local`, then run `npm run build:cms` once. Commit the new or updated **`tina/tina-lock.json`** (and any other new files under `tina/` except `tina/__generated__/`), push to **main**. That push can trigger Tina to index.  
+  Ensure **`tina/config.ts`** and the rest of **`tina/`** (except **`tina/__generated__/`**) are committed and on **main**; Tina needs them to index.
+  4. **Vercel env (optional):** In Vercel → Project → Environment Variables, add **`GITHUB_BRANCH`** = **`main`** so the built admin always asks for the **main** branch.

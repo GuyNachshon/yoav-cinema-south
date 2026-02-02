@@ -61,6 +61,32 @@ git push origin main
 
 ---
 
+## Step 4b: Generate `tina/tina-lock.json` (recommended)
+
+Tina Cloud uses **`tina/tina-lock.json`** to index your branch. The file is created only when the Tina CLI runs with valid credentials.
+
+**Important:** The Tina CLI only loads **`.env`** (not `.env.local`). So for this step use **`.env`** in the project root. Keep `.env` in `.gitignore` and do not commit it.
+
+1. In the project root, create **`.env`** with:
+   ```bash
+   NEXT_PUBLIC_TINA_CLIENT_ID=<paste Client ID from Step 4>
+   TINA_TOKEN=<paste Token from Step 4>
+   ```
+2. Run once:
+   ```bash
+   npm run build:cms
+   ```
+   (You can cancel after the Tina build step if you don't need the full Next build.)
+3. Confirm **`tina/tina-lock.json`** exists. Commit and push:
+   ```bash
+   git add tina/tina-lock.json
+   git commit -m "Add tina-lock.json for Tina Cloud indexing"
+   git push origin main
+   ```
+4. Keep **`tina/tina-lock.json`** in the repo; do **not** add it to `.gitignore`.
+
+---
+
 ## Step 5: Enable the Tina admin on the live site
 
 1. In **Vercel** → your project → **Settings** → **General**.
@@ -96,6 +122,17 @@ git push origin main
 ## Optional: Custom domain
 
 In **Vercel** → your project → **Settings** → **Domains**, add your domain and follow the DNS instructions. The admin will then be at **https://yourdomain.com/admin**.
+
+---
+
+## If main branch is not indexing in Tina
+
+1. In **[app.tina.io](https://app.tina.io)** → your project → **Configuration** (or **Repo** / **Branches**), find where to **pull**, **index**, or **add** a branch. Add **main** and wait a few minutes.
+2. Ensure **`tina/config.ts`** (and any **`tina/tina-lock.json`** if present) is committed on **main** and not ignored.
+3. To force reindex: add `NEXT_PUBLIC_TINA_CLIENT_ID` and `TINA_TOKEN` to **`.env.local`**, run **`npm run build:cms`** once, then commit **`tina/tina-lock.json`** (if created) and push to **main**.
+4. Optionally in **Vercel** → Environment Variables, add **`GITHUB_BRANCH`** = **`main`**.
+
+More detail: **INTEGRATE_TINA.md** → “Main branch not indexing”.
 
 ---
 
