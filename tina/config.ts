@@ -30,6 +30,7 @@ export default defineConfig({
         match: { include: "about" },
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
+          { type: "string", name: "name", label: "Document name (for admin)", description: "Display name in Tina sidebar", ui: { component: null } },
           { type: "string", name: "column1", label: "Column 1", ui: { component: "textarea" } },
           { type: "string", name: "column2", label: "Column 2", ui: { component: "textarea" } },
         ],
@@ -42,6 +43,7 @@ export default defineConfig({
         match: { include: "about-leaders" },
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
+          { type: "string", name: "name", label: "Document name (for admin)", description: "Display name in Tina sidebar", ui: { component: null } },
           {
             type: "object",
             name: "leaders",
@@ -63,6 +65,7 @@ export default defineConfig({
         match: { include: "panorama" },
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
+          { type: "string", name: "name", label: "Document name (for admin)", description: "Display name in Tina sidebar", ui: { component: null } },
           {
             type: "object",
             name: "panoramaImages",
@@ -83,6 +86,7 @@ export default defineConfig({
         match: { include: "movies" },
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
+          { type: "string", name: "name", label: "Document name (for admin)", description: "Display name in Tina sidebar", ui: { component: null } },
           {
             type: "object",
             name: "movies",
@@ -132,6 +136,7 @@ export default defineConfig({
         match: { include: "schedule" },
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
+          { type: "string", name: "name", label: "Document name (for admin)", description: "Display name in Tina sidebar", ui: { component: null } },
           {
             type: "object",
             name: "schedule",
@@ -158,6 +163,7 @@ export default defineConfig({
         match: { include: "categories" },
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
+          { type: "string", name: "name", label: "Document name (for admin)", description: "Display name in Tina sidebar", ui: { component: null } },
           {
             type: "object",
             name: "categories",
@@ -180,6 +186,7 @@ export default defineConfig({
         match: { include: "competitions" },
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
+          { type: "string", name: "name", label: "Document name (for admin)", description: "Display name in Tina sidebar", ui: { component: null } },
           {
             type: "object",
             name: "competitions",
@@ -206,6 +213,7 @@ export default defineConfig({
         match: { include: "events" },
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
+          { type: "string", name: "name", label: "Document name (for admin)", description: "Display name in Tina sidebar", ui: { component: null } },
           {
             type: "object",
             name: "events",

@@ -1,4 +1,5 @@
 {
+  "name": "Panorama",
   "panoramaImages": [
     { "slug": "nili-battles", "filename": "הקרבות של נילי .jpg" },
     { "slug": "aviv-meshuga", "filename": "אביב משוגע.jpg" },
