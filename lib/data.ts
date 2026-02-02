@@ -4,13 +4,14 @@ import scheduleData from "@/content/schedule.json";
 import moviesData from "@/content/movies.json";
 import aboutData from "@/content/about.json";
 
-type Wrapped<T> = { [key: string]: T[] };
+/** Content files may have a root "name" (Tina display) plus the main array key. */
+type Wrapped<T> = { [key: string]: T[] | string };
 
-export const categories: Category[] = (categoriesData as Wrapped<Category>).categories;
-export const movies: Movie[] = (moviesData as Wrapped<Movie>).movies;
+export const categories: Category[] = (categoriesData as Wrapped<Category>).categories as Category[];
+export const movies: Movie[] = (moviesData as Wrapped<Movie>).movies as Movie[];
 export const aboutCopy: AboutCopy = aboutData as AboutCopy;
 
-const schedule: Event[] = (scheduleData as Wrapped<Event>).schedule;
+const schedule: Event[] = (scheduleData as Wrapped<Event>).schedule as Event[];
 
 export function getMovieBySlug(slug: string): Movie | undefined {
   return movies.find((m) => m.slug === slug);
