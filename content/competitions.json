@@ -1,0 +1,68 @@
+{
+  "competitions": [
+    {
+      "slug": "new-south-cinema",
+      "title": "קולנוע דרום חדש",
+      "order": 1,
+      "speed": 20,
+      "acceleration": 1.5,
+      "direction": "left"
+    },
+    {
+      "slug": "exposure-to-south",
+      "title": "חשיפה לדרום",
+      "order": 2,
+      "speed": 10,
+      "acceleration": 0.5,
+      "direction": "right"
+    },
+    {
+      "slug": "yahav-winer",
+      "title": "תחרות ביכורים ע״ש יהב וינר",
+      "order": 3,
+      "speed": 40,
+      "acceleration": 0.5
+    },
+    {
+      "slug": "negev-students",
+      "title": "תחרות נגב לסטודנטים",
+      "order": 4,
+      "speed": 40,
+      "acceleration": 0.5,
+      "direction": "right"
+    },
+    {
+      "slug": "panorama",
+      "title": "פנורמה",
+      "order": 5,
+      "speed": 40,
+      "acceleration": 0.5,
+      "itemGap": -140,
+      "repeat": 200
+    },
+    {
+      "slug": "wide-screen",
+      "title": "מסך רחב",
+      "order": 6,
+      "speed": 40,
+      "acceleration": 0.5,
+      "direction": "left",
+      "repeat": 55
+    },
+    {
+      "slug": "movement",
+      "title": "סרטי מחול ותנועה",
+      "order": 7,
+      "speed": 40,
+      "acceleration": 0.5
+    },
+    {
+      "slug": "doco",
+      "title": "תיעודי",
+      "order": 8,
+      "speed": 40,
+      "acceleration": 20,
+      "direction": "right"
+    }
+  ]
+}

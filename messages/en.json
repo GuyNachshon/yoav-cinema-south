@@ -1,0 +1,26 @@
+{
+  "common": {
+    "nav": {
+      "movies": "Movies",
+      "events": "Events Schedule",
+      "about": "About"
+    },
+    "locale": {
+      "he": "HE",
+      "en": "EN"
+    }
+  },
+  "landing": {
+    "title": "Panorama"
+  },
+  "about": {
+    "title": "About"
+  },
+  "movies": {
+    "title": "Competitions"
+  },
+  "events": {
+    "title": "Events Schedule",
+    "locations": "Rahat رهط Ofakim אופקים Kibbutz Dorot קיבוץ דורות Sderot שדרות"
+  }
+}

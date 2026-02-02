@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@property --ticker-speed {
+  syntax: "<time>";
+  inherits: true;
+  initial-value: 999s;
+}
+
+:root {
+  --navbar-height: 3rem;
+  --pattern-band-height: 4rem;
+}
+
+/* Navbar: TheBasics Mono (set by next/font on html) */
+.navbar-font {
+  font-family: var(--font-the-basics-mono), ui-monospace, monospace;
+}
+
+/* Navbar language switcher: EN/عر */
+.navbar-lang {
+  font-family: var(--font-the-basics-mono), ui-monospace, monospace;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  color: #fff;
+}
+
+/* Landing strip titles: NextExit Bold */
+.strip-title-font {
+  font-family: var(--font-next-exit), sans-serif;
+}
+
+/* Events schedule: date (NextExit 172px) */
+.schedule-date {
+  font-family: var(--font-next-exit), sans-serif;
+  font-size: 172px;
+  font-weight: 700;
+  line-height: 0.4;
+  letter-spacing: -12.04px;
+  color: #fff;
+  text-align: right;
+  margin-right: 5px; /* align with day name start in RTL */
+}
+
+/* Events schedule: day name (TheBasics 24px) */
+.schedule-day {
+  font-family: var(--font-the-basics), sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+  text-align: right;
+}
+
+/* About page: contact block (TheBasics Mono 20px) */
+.about-contact {
+  font-family: var(--font-the-basics-mono), ui-monospace, monospace;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+  color: #fff;
+  text-align: right;
+}
+
+/* About page: body text (TheBasics 30px) */
+.about-body {
+  font-family: var(--font-the-basics), sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #fff;
+  text-align: right;
+}
+
+/* Events schedule: strip divider inset 6px on x */
+.schedule-strip {
+  position: relative;
+}
+.schedule-strip::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 6px;
+  right: 6px;
+  height: 1px;
+  background: #fff;
+}
+
+/* Events schedule: time column (right-aligned) + 20px gap then description */
+.schedule-time-cell {
+  width: 3.5rem; /* fits "00:00" */
+  min-width: 3.5rem;
+  text-align: right;
+  margin-inline-end: 20px;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  box-sizing: border-box;
+}
+
+a:focus-visible,
+button:focus-visible {
+  @apply outline-2 outline-offset-2 outline-white;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Pixel-exact loop for strips with negative gap (avoids % rounding gap) */
+@keyframes scrollExact {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--band-copy-width, 0px)));
+  }
+}
+
+@keyframes scrollRightExact {
+  0% {
+    transform: translateX(calc(-1 * var(--band-copy-width, 0px)));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--scroll-speed, 30s) linear infinite;
+}

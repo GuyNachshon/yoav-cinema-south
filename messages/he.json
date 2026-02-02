@@ -1,0 +1,26 @@
+{
+  "common": {
+    "nav": {
+      "movies": "הסרטים",
+      "events": "לוח אירועים",
+      "about": "אודות"
+    },
+    "locale": {
+      "he": "עב",
+      "en": "EN"
+    }
+  },
+  "landing": {
+    "title": "פנורמה"
+  },
+  "about": {
+    "title": "אודות"
+  },
+  "movies": {
+    "title": "תחרויות"
+  },
+  "events": {
+    "title": "לוח אירועים",
+    "locations": "Rahat رهط Ofakim אופקים Kibbutz Dorot קיבוץ דורות Sderot שדרות"
+  }
+}

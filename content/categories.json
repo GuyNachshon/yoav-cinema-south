@@ -1,0 +1,76 @@
+{
+  "categories": [
+    {
+      "slug": "new-south-cinema",
+      "nameHe": "קולנוע דרום חדש",
+      "patternKey": "diamonds",
+      "order": 1
+    },
+    {
+      "slug": "haifa-to-south",
+      "nameHe": "חיפה לדרום",
+      "patternKey": "camels",
+      "order": 2
+    },
+    {
+      "slug": "debut",
+      "nameHe": "תחרות ביכורים",
+      "patternKey": "zigzag",
+      "order": 3
+    },
+    {
+      "slug": "negev-students",
+      "nameHe": "תחרות נגב לסטודנטים",
+      "patternKey": "doubleChevron",
+      "order": 4
+    },
+    {
+      "slug": "features",
+      "nameHe": "סרטים / פיצ'רים",
+      "patternKey": "diagonalStripes",
+      "order": 5
+    },
+    {
+      "slug": "wide-film",
+      "nameHe": "סרך רחב",
+      "patternKey": "singleChevron",
+      "order": 6
+    },
+    {
+      "slug": "mobile-movement",
+      "nameHe": "סרטי סלולר ותנועה",
+      "patternKey": "arrowUpDown",
+      "order": 7
+    },
+    {
+      "slug": "documentary",
+      "nameHe": "תיעודי",
+      "patternKey": "camera",
+      "order": 8
+    },
+    {
+      "slug": "premieres",
+      "nameHe": "פרימיירות",
+      "patternKey": "thinLine",
+      "order": 9
+    },
+    {
+      "slug": "youth-students",
+      "nameHe": "נוער לסטודנטים דרום",
+      "patternKey": "curvedArrowDown",
+      "order": 10
+    },
+    {
+      "slug": "animation",
+      "nameHe": "אנימציה",
+      "patternKey": "figureWithTool",
+      "order": 11
+    },
+    {
+      "slug": "music",
+      "nameHe": "מוזיקה",
+      "patternKey": "x",
+      "order": 12
+    }
+  ]
+}
