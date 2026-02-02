@@ -50,14 +50,13 @@ Types are in **`types/content.ts`**. Data is loaded in **`lib/data.ts`**, **`lib
 - **Admin UI (recommended):** Run `npm run dev:cms`, open **http://localhost:3000/admin/index.html**, and edit any content in the sidebar. Connect [Tina Cloud](https://app.tina.io) so saves create Git commits and trigger Vercel redeploy. No code or JSON needed.
 - **GitHub:** Open the repo → `content/` → edit the JSON file → Commit. Vercel will redeploy.
 
-## Deploy to Vercel
+## Deploy (Vercel or Cloudflare)
 
-1. Push the repo to GitHub (or GitLab/Bitbucket).
-2. In [Vercel](https://vercel.com): **Add New Project** → Import the repo.
-3. Framework: **Next.js** (auto-detected). Root: project root. Build: `next build`. No extra env vars needed for basic deploy.
-4. Deploy. Future pushes to the default branch trigger new deployments.
+**Vercel:** Push the repo to GitHub. In [Vercel](https://vercel.com): **Add New Project** → Import the repo. Framework: Next.js. Build: `next build` (or `npm run build:cms` for the Tina admin). Future pushes trigger new deployments.
 
-Content is read from the repo at build time, so edits to `content/*.json` go live on the next deploy (either push or Vercel “Redeploy”).
+**Cloudflare:** Deploy the same repo to Cloudflare Workers via OpenNext; see **DEPLOY_CLOUDFLARE.md**. Tina Cloud works the same: connect the same GitHub repo to Cloudflare; when Tina pushes, Cloudflare redeploys.
+
+Content is read from the repo at build time, so edits go live on the next deploy (push or “Redeploy”).
 
 ## TinaCMS admin UI (everything editable)
 
