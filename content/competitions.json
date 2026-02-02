@@ -36,7 +36,7 @@
       "slug": "panorama",
       "title": "פנורמה",
       "order": 5,
-      "speed": 20,
+      "speed": 120,
       "acceleration": 0.5,
       "itemGap": -140,
       "repeat": 200
